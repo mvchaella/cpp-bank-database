@@ -1,0 +1,303 @@
+Script started on Sat 25 Nov 2023 06:07:09 PM HST
+]0;jmv9@uhx02:~/project2[?1034huhx02:/home/j/jmv9/project2% make -f debug.mak
+g++ -DDEBUG -ansi -pedantic-errors -Wall -c user_interface.cpp
+[01m[Kuser_interface.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Kuser_interface.cpp:68:30:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     llist database("data.txt");
+[01;32m[K                              ^[m[K
+g++ -DDEBUG -ansi -pedantic-errors -Wall -c llist.cpp                                                                 
+g++ -o project_debug user_interface.o llist.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% ./proe[Kject_debug
+
+================================================
+    Constructor llist()
+    Parameters: 
+        char[] filename: data.txt
+================================================
+
+================================================
+    llist method: readfile() 
+================================================
+
+================================================
+    llist method: addRecord
+    Parameters: 
+        int uaccountno: 5000
+        char[] uname: Chaeyoung Son
+        char[] uaddress: 1930 Chaeyoung Ave. NC, USA
+================================================
+
+================================================
+    llist method: addRecord
+    Parameters: 
+        int uaccountno: 3485
+        char[] uname: Nana Im
+        char[] uaddress: Nanananana
+================================================
+
+================================================
+    llist method: addRecord
+    Parameters: 
+        int uaccountno: 3000
+        char[] uname: Jeongyeon Yoo
+        char[] uaddress: Somewehere in JYP,
+Seoul, SK, 01010101
+================================================
+
+================================================
+    llist method: addRecord
+    Parameters: 
+        int uaccountno: 2000
+        char[] uname: Jennie Kim
+        char[] uaddress: BLACKPINK
+================================================
+
+================================================
+    llist method: addRecord
+    Parameters: 
+        int uaccountno: 1000
+        char[] uname: Sana Minatozaki
+        char[] uaddress: Somewhere in Itaewon,
+Seoul, SK, 0110-0110
+================================================
+
+================================================
+    llist method: addRecord
+    Parameters: 
+        int uaccountno: 500
+        char[] uname: Mina Myoui
+        char[] uaddress: Mina World
+in Mina Universe
+================================================
+
+================================================
+    Function: main
+    Parameters: 
+        struct record **: 
+        int accountno: 0
+        char[] name: 
+        char[] address: 
+================================================
+
+Welcome to the main menu of the UH Bank database. The following commands will allow you to access or modify an existing customer's bank records or to create a new account. Type in a command to proceed.
+
+
+    Commands: 
+            add: to add a new record in the database
+            printall: to print all records in the database
+            find: to find the record of an account number
+            delete: to delete an existing record
+
+
+Enter an option or type 'quit' to exit: printall
+
+================================================
+    llist method: printAllRecord() 
+================================================
+
+Account #: 5000
+Name: Chaeyoung Son
+Address: 1930 Chaeyoung Ave. NC, USA
+
+Account #: 3485
+Name: Nana Im
+Address: Nanananana
+
+Account #: 3000
+Name: Jeongyeon Yoo
+Address: Somewehere in JYP,
+Seoul, SK, 01010101
+
+Account #: 2000
+Name: Jennie Kim
+Address: BLACKPINK
+
+Account #: 1000
+Name: Sana Minatozaki
+Address: Somewhere in Itaewon,
+Seoul, SK, 0110-0110
+
+Account #: 500
+Name: Mina Myoui
+Address: Mina World
+in Mina Universe
+
+    Commands: 
+            add: to add a new record in the database
+            printall: to print all records in the database
+            find: to find the record of an account number
+            delete: to delete an existing record
+
+
+Enter an option or type 'quit' to exit: d find
+
+To find an account please follow the following prompts.
+Enter Account #: 2000
+
+================================================
+    llist method: findRecord
+    Parameters: 
+        int uaccountno: 2000
+================================================
+
+Account #: 2000
+Name: Jennie Kim
+Address: BLACKPINK
+
+    Commands: 
+            add: to add a new record in the database
+            printall: to print all records in the database
+            find: to find the record of an account number
+            delete: to delete an existing record
+
+
+Enter an option or type 'quit' to exit: del
+
+To delete an account please follow the following prompts.
+Enter Account #: 3485
+Inputed Account #: 3485
+
+================================================
+    llist method: deleteRecord
+    Parameters: 
+        int uaccountno: 3485
+================================================
+Account has been successfully deleted.
+
+    Commands: 
+            add: to add a new record in the database
+            printall: to print all records in the database
+            find: to find the record of an account number
+            delete: to delete an existing record
+
+
+Enter an option or type 'quit' to exit: quit
+
+Exiting database. Have a good day.
+
+
+================================================
+    Destructor: ~llist() 
+================================================
+
+================================================
+    llist method: writefile() 
+================================================
+
+================================================
+    llist method: cleanup() 
+================================================
+
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% rm *.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% make -f release.mak
+g++ -ansi -pedantic-errors -Wall -c user_interface.cpp
+[01m[Kuser_interface.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Kuser_interface.cpp:68:30:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     llist database("data.txt");
+[01;32m[K                              ^[m[K
+g++ -ansi -pedantic-errors -Wall -c llist.cpp                                                
+g++ -o project user_interface.o llist.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% ./project
+
+Welcome to the main menu of the UH Bank database. The following commands will allow you to access or modify an existing customer's bank records or to create a new account. Type in a command to proceed.
+
+
+    Commands: 
+            add: to add a new record in the database
+            printall: to print all records in the database
+            find: to find the record of an account number
+            delete: to delete an existing record
+
+
+Enter an option or type 'quit' to exit: add
+To add an account please follow the following prompts.
+Enter Account #: 1234
+Name: Mom   Chaw ewon Lee
+Please enter your address below. Type '!' when you're done and click enter.
+Address: Somewhere in Sk  the World,
+Seoul, Sk,    K, 0100101!
+Account was added successfully.
+
+    Commands: 
+            add: to add a new record in the database
+            printall: to print all records in the database
+            find: to find the record of an account number
+            delete: to delete an existing record
+
+
+Enter an option or type 'quit' to exit: prin    quit    print
+
+Account #: 5000
+Name: Chaeyoung Son
+Address: 1930 Chaeyoung Ave. NC, USA
+
+Account #: 3000
+Name: Jeongyeon Yoo
+Address: Somewehere in JYP,
+Seoul, SK, 01010101
+
+Account #: 2000
+Name: Jennie Kim
+Address: BLACKPINK
+
+Account #: 1234
+Name: Chaewon Lee
+Address: Somewhere in the World,
+Seoul, SK, 0100101
+
+Account #: 1000
+Name: Sana Minatozaki
+Address: Somewhere in Itaewon,
+Seoul, SK, 0110-0110
+
+Account #: 500
+Name: Mina Myoui
+Address: Mina World
+in Mina Universe
+
+    Commands: 
+            add: to add a new record in the database
+            printall: to print all records in the database
+            find: to find the record of an account number
+            delete: to delete an existing record
+
+
+Enter an option or type 'quit' to exit: find
+
+To find an account please follow the following prompts.
+Enter Account #: 1234
+
+Account #: 1234
+Name: Chaewon Lee
+Address: Somewhere in the World,
+Seoul, SK, 0100101
+
+    Commands: 
+            add: to add a new record in the database
+            printall: to print all records in the database
+            find: to find the record of an account number
+            delete: to delete an existing record
+
+
+Enter an option or type 'quit' to exit: delete
+
+To delete an account please follow the following prompts.
+Enter Account #: 500
+Inputed Account #: 500
+Account has been successfully deleted.
+
+    Commands: 
+            add: to add a new record in the database
+            printall: to print all records in the database
+            find: to find the record of an account number
+            delete: to delete an existing record
+
+
+Enter an option or type 'quit' to exit: quit
+
+Exiting database. Have a good day.
+
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% exit
+exit
+
+Script done on Sat 25 Nov 2023 06:09:13 PM HST

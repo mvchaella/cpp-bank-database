@@ -1,0 +1,57 @@
+Script started on Sat 25 Nov 2023 06:10:59 PM HST
+]0;jmv9@uhx02:~/project2[?1034huhx02:/home/j/jmv9/project2% touch *.c
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% make release[K[K[K[K[K[K[K-e[Kf release.mak
+g++ -ansi -pedantic-errors -Wall -c user_interface.cpp
+[01m[Kuser_interface.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Kuser_interface.cpp:68:30:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     llist database("data.txt");
+[01;32m[K                              ^[m[K
+g++ -ansi -pedantic-errors -Wall -c llist.cpp                                                
+g++ -o project user_interface.o llist.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% make -f release.mak
+make: `project' is up to date.
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% make -f debug.mak
+g++ -o project_debug user_interface.o llist.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% make 0f [K[K[K-f debug.mak
+make: `project_debug' is up to date.
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% touch i[Kuser_interface.cpp
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% make -f rle[K[Kelease.mak
+g++ -ansi -pedantic-errors -Wall -c user_interface.cpp
+[01m[Kuser_interface.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Kuser_interface.cpp:68:30:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     llist database("data.txt");
+[01;32m[K                              ^[m[K
+g++ -o project user_interface.o llist.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% make- [K[K[K [Ke -[K-f debug.mak
+g++ -o project_debug user_interface.o llist.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% touch llist.[K[K[K[K[K[K[K[K[K[K[K[Kt[Ktouch llist.cpp
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% make -f rlee[K[K[Kelease.mak
+g++ -ansi -pedantic-errors -Wall -c llist.cpp                                                
+g++ -o project user_interface.o llist.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% make -f debug.mak
+g++ -o project_debug user_interface.o llist.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% touch *.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% make -f debu[K[K[K[Krelease.mak
+g++ -o project user_interface.o llist.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% make 0f[K[K-f debug.mak
+g++ -o project_debug user_interface.o llist.o
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% ./project
+
+Welcome to the main menu of the UH Bank database. The following commands will allow you to access or modify an existing customer's bank records or to create a new account. Type in a command to proceed.
+
+
+    Commands: 
+            add: to add a new record in the database
+            printall: to print all records in the database
+            find: to find the record of an account number
+            delete: to delete an existing record
+
+
+Enter an option or type 'quit' to exit: quit
+
+Exiting database. Have a good day.
+
+]0;jmv9@uhx02:~/project2uhx02:/home/j/jmv9/project2% exit
+exit
+
+Script done on Sat 25 Nov 2023 06:13:53 PM HST
